@@ -1,5 +1,4 @@
-import React from "react";
+import BannerCard from "./BannerCard";
+import ProductCard from "./ProductCard";
 
-export default function index() {
-  return <div>index</div>;
-}
+export { ProductCard, BannerCard };

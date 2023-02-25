@@ -12,7 +12,7 @@ export default function DefaultTemp(props) {
         <title>{title ? `${title} | Breeze Coffee` : "Breeze Coffee"}</title>
       </Helmet>
       {/* <Navbar /> */}
-      <div className="px-[2rem] md:px-[5rem]">{children}</div>
+      <main>{children}</main>
       {/* <Footer /> */}
     </div>
   );
