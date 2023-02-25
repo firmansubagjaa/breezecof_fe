@@ -1,18 +1,17 @@
-import React from 'react'
+import React from "react";
 // herobanner3
-import checklist2 from '../../assets/svg/checklist2.svg'
-import package1 from '../../assets/png/hazelnut.png'
+import checklist2 from "../../assets/svg/checklist2.svg";
+import package1 from "../../assets/png/hazelnut.png";
 
 export default function Herobanner3() {
   return (
     <>
       <div className="container py-16">
         <div className="text-center">
-          <h2 className='text-3xl mt-10 font-bold'>Here is People’s Favorite</h2>
+          <h2 className="text-3xl mt-10 font-bold">Here is People’s Favorite</h2>
           <p>Let’s choose and have a bit taste of poeple’s favorite. It might be yours too!</p>
         </div>
         <div className="flex flex-col md:flex-row mt-20">
-
           {[1, 2, 3].map(() => {
             return (
               <>
@@ -26,28 +25,27 @@ export default function Herobanner3() {
                         <h2 className="card-title">Hazelnut Latte</h2>
                       </div>
                       <div className="ml-10 py-10 leading-loose">
-
                         <ul>
-                          <li className='flex'>
-                            <img src={checklist2} alt="" className='mr-3' />
+                          <li className="flex">
+                            <img src={checklist2} alt="" className="mr-3" />
                             <p>Hazelnut Syrup</p>
                           </li>
                         </ul>
                         <ul>
-                          <li className='flex'>
-                            <img src={checklist2} alt="" className='mr-3' />
+                          <li className="flex">
+                            <img src={checklist2} alt="" className="mr-3" />
                             <p>Wanilla Whipped Cream</p>
                           </li>
                         </ul>
                         <ul>
-                          <li className='flex'>
-                            <img src={checklist2} alt="" className='mr-3' />
+                          <li className="flex">
+                            <img src={checklist2} alt="" className="mr-3" />
                             <p>Ice / Hot</p>
                           </li>
                         </ul>
                         <ul>
-                          <li className='flex'>
-                            <img src={checklist2} alt="" className='mr-3' />
+                          <li className="flex">
+                            <img src={checklist2} alt="" className="mr-3" />
                             <p>Sliced Banana on Top</p>
                           </li>
                         </ul>
@@ -59,10 +57,10 @@ export default function Herobanner3() {
                   </div>
                 </div>
               </>
-            )
+            );
           })}
         </div>
       </div>
     </>
-  )
+  );
 }
