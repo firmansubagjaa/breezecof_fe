@@ -4,12 +4,16 @@ import logo from '../../assets/svg/logo.svg'
 import facebook from "../../assets/svg/social-media/Socmed/Facebook.svg"
 import twitter from "../../assets/svg/social-media/Socmed/Twitter.svg"
 import instagram from "../../assets/svg/social-media/Socmed/Instagram.svg"
+import { ProductCard } from '../card'
 
 export default function Footer() {
   return (
     <>
       {/* footer */}
-      <footer className="footer p-10 text-base-content bg-zinc-50">
+      <div>
+        <ProductCard />
+      </div>
+      <footer className="footer p-10 text-base-content bg-[#f8f8f8]">
         <div className="container pt-14">
           <div className="flex justify-between w-full">
             <div className='flex flex-col items-start'>
