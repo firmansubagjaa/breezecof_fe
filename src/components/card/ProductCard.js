@@ -7,7 +7,7 @@ export default function ProductCard() {
         <div className="container">
           <div className="card w-full bg-base-100 shadow-xl">
             <div className="card-body">
-              <div className="flex justify-between items-center">
+              <div className="flex flex-col md:flex-row justify-between items-center">
                 <div>
                   <h2 className="font-bold text-3xl">Check our promo <br /> today!</h2>
                   <p>Let's see the deals and pick yours!</p>

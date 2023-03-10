@@ -7,6 +7,8 @@ import Partner from "./Partner";
 import DefaultTemp from "../../templates/DefaultTemp";
 import Sponsor from "./sponsor";
 import Footer from "../../components/footer";
+import Product from "../product";
+import { ProductCard } from "../../components/card";
 
 export default function Home() {
   return (
@@ -18,6 +20,7 @@ export default function Home() {
         <Map />
         <Sponsor />
         <Partner />
+        <ProductCard />
         <Footer />
       </DefaultTemp>
     </>

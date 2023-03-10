@@ -10,7 +10,7 @@ export default function Feature() {
       <div className="-mt-14">
         <BannerCard />
       </div>
-      <div className="container mt-20 h-screen">
+      <div className="container mt-20 h-full py-14">
         <div className="flex flex-col md:flex-row justify-between">
           <figure>
             <img src={herobanner2} alt="Team Work" />

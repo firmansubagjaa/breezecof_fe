@@ -1,8 +1,62 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/svg/logo.svg";
+// import Auth from "../../constant/auth.json";
 
 export default function Navbar() {
+  // console.log(Auth)
+  // const isLogin = localStorage.getItem(Auth)
+  // const [login, setLogin] = useState([])
+
+  // useEffect(() => {
+  //   setLogin(Auth)
+  //   localStorage.getItem(login, JSON.stringify(login))
+  // }, [])
+
+  const nonAuth = () => {
+    return (
+      <>
+        <Link to={"/login"}>
+          <button className="btn hidden md:grid btn-link no-underline text-black px-8">Login</button>
+        </Link>
+        <Link to={"/register"}>
+          <button className="btn btn-primary rounded-full px-8">Sign Up</button>
+        </Link>
+      </>
+    )
+  }
+
+  const auth = () => {
+    return (
+      <>
+        <div className="indicator mr-5">
+          <span className="indicator-item badge badge-secondary">99+</span>
+          <button className="btn btn-ghost">
+            <img src={require('../../assets/png/chat.png')} alt="chat" />
+          </button>
+        </div>
+        <div className="dropdown dropdown-end">
+          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+            <div className="w-10 rounded-full">
+              <img src={require("../../assets/png/user.png")} />
+            </div>
+          </label>
+          <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+            <li>
+              <Link className="justify-between">
+                Profile
+                <span className="badge">New</span>
+              </Link>
+            </li>
+            <li><Link>Settings</Link></li>
+            <li><Link to='/login' onClick={() => localStorage.removeItem('@userLogin')} >Logout</Link></li>
+          </ul>
+        </div>
+      </>
+    )
+  }
+
+
   return (
     <>
       {/* navbar */}
@@ -57,12 +111,14 @@ export default function Navbar() {
               </ul>
             </div>
             <div className="navbar-end flex">
-              <Link to={"/login"}>
+              {localStorage.getItem('@userLogin') ? auth() : nonAuth()}
+
+              {/* <Link to={"/login"}>
                 <button className="btn hidden md:grid btn-link no-underline text-black px-8">Login</button>
               </Link>
               <Link to={"/register"}>
                 <button className="btn btn-primary rounded-full px-8">Sign Up</button>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

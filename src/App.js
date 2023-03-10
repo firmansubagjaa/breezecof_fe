@@ -5,6 +5,7 @@ import Register from "./pages/register";
 import Product from "./pages/product";
 // utils
 import { HelmetProvider } from "react-helmet-async";
+import ProductDetail from "./pages/productDetail";
 // import Belajar from "./components/"
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
         </Routes>
       </HelmetProvider>
 

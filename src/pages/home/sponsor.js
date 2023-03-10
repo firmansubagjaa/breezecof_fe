@@ -11,7 +11,7 @@ export default function Sponsor() {
       <div className='container'>
         <div className="text-center">
           <h2 className='text-3xl pt-10 font-bold'>Our Partner</h2>
-          <div className="flex flex-wrap justify-between items-center">
+          <div className="flex flex-col justify-between items-center md:flex-row">
             <div className='my-10 md:my-0'>
               <img src={Netflix} alt="Netflix" />
             </div>

@@ -2,8 +2,8 @@ import React from "react";
 
 import Footer from "../../components/footer";
 import logo from "../../assets/svg/logo.svg";
-import Form from "./components/form";
 import { Link } from "react-router-dom";
+import RegisterForm from "../../components/form/RegisterForm";
 
 export default function Login() {
   return (
@@ -26,7 +26,7 @@ export default function Login() {
               </Link>
             </div>
           </div>
-          <Form />
+          <RegisterForm />
         </div>
       </div>
 

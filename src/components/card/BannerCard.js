@@ -7,7 +7,7 @@ export default function BannerCard() {
       <div className="container">
         <div className="card w-full bg-base-100 shadow-xl">
           <div className="card-body">
-            <div className="flex justify-around">
+            <div className="flex flex-col md:flex-row justify-around items-center">
               <div className="mr-3 flex">
                 <img src={userIcon} alt="user" className="mr-3" />
                 <div>
@@ -15,7 +15,7 @@ export default function BannerCard() {
                   <p>Staff</p>
                 </div>
               </div>
-              <div className="mr-3 flex">
+              <div className="mr-3 my-5 lg:my-0 flex">
                 <img src={userIcon} alt="user" className="mr-3" />
                 <div>
                   <h2 className="font-bold">90+</h2>

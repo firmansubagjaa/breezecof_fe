@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/svg/logo.svg";
 import { LoginForm } from "../../components/form";
 import { Link } from "react-router-dom";
 import DefaultTemp from "../../templates/DefaultTemp";
+import Footer from "../../components/footer";
+
 
 export default function Login() {
   return (
@@ -30,7 +32,7 @@ export default function Login() {
           </div>
         </div>
         {/* <CardOffer /> */}
-        {/* <Footer /> */}
+        <Footer />
       </DefaultTemp>
     </>
   );

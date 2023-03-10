@@ -4,7 +4,7 @@ import HeroBanner from "../../assets/png/herobanner1.png";
 
 export default function Hero() {
   return (
-    <div className="w-full h-screen" style={{ backgroundImage: `url(${HeroBanner})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}>
+    <div className="w-full h-full lg:h-screen" style={{ backgroundImage: `url(${HeroBanner})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}>
       <Navbar />
       <div className="container">
         <div className="flex flex-wrap justify-between pt-[7rem]">

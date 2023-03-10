@@ -10,12 +10,9 @@ export default function Footer() {
   return (
     <>
       {/* footer */}
-      <div>
-        <ProductCard />
-      </div>
       <footer className="footer p-10 text-base-content bg-[#f8f8f8]">
         <div className="container pt-14">
-          <div className="flex justify-between w-full">
+          <div className="flex flex-col md:flex-row justify-between w-full">
             <div className='flex flex-col items-start'>
               <a className="font-bold flex normal-case items-center text-xl">
                 <img src={logo} alt="BreezeCof" className='mr-2' />
@@ -34,7 +31,7 @@ export default function Footer() {
               </div>
             </div>
             <div className='flex'>
-              <div className="flex flex-col mx-10 leading-loose">
+              <div className="flex flex-col mx-0 my-10 md:mx-10 md:my-0 leading-loose">
                 <span className="footer-title">Product</span>
                 <a className="link link-hover">Download</a>
                 <a className="link link-hover">Pricing</a>
@@ -42,7 +39,7 @@ export default function Footer() {
                 <a className="link link-hover">Countries</a>
                 <a className="link link-hover">Blog</a>
               </div>
-              <div className="flex flex-col mx-10 leading-loose">
+              <div className="flex flex-col mx-10 my-10 md:my-0 leading-loose">
                 <span className="footer-title">Engage</span>
                 <a className="link link-hover">BreezeCof</a>
                 <a className="link link-hover">FAQ</a>

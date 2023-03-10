@@ -12,11 +12,11 @@ export default function Herobanner3() {
             <h2 className="text-3xl mt-10 font-bold">Here is People’s Favorite</h2>
             <p>Let’s choose and have a bit taste of poeple’s favorite. It might be yours too!</p>
           </div>
-          <div className="flex flex-col md:flex-row mt-20">
+          <div className="flex flex-col lg:flex-row mt-20">
             {[1, 2, 3].map(() => {
               return (
                 <>
-                  <div className="card w-full mx-0 mt-10 md:mx-5 bg-base-100 shadow-xl">
+                  <div className="card w-full mx-0 mt-10 lg:mx-5 bg-base-100 shadow-xl">
                     <figure className="px-10 py-10 pt-10">
                       <img src={package1} alt="Hazelnut Latte" className="rounded-full shadow-xl" />
                     </figure>
