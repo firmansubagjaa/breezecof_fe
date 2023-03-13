@@ -14,26 +14,26 @@ export default function TabSection(props) {
   const [refetch, setRefetch] = useState(false)
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/v1/products?search=${keyword}`)
+    axios.get(`https://alive-fashion-cow.cyclic.app/api/v1/products?search=${keyword}`)
       .then((res) => { setData(res.data.data) })
       .catch((err) => console.log(err.response))
   }, [keyword, category])
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/v1/products?cat=${category}`)
+    axios.get(`https://alive-fashion-cow.cyclic.app/api/v1/products?cat=${category}`)
       .then((res) => setData(res.data.data))
       .catch((err) => console.log(err.response))
   }, [category])
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/v1/products?sortBy=${sortBy}`)
+    axios.get(`https://alive-fashion-cow.cyclic.app/api/v1/products?sortBy=${sortBy}`)
       .then((res) => setData(res.data.data))
       .catch((err) => console.log(err.response))
   }, [sortBy])
 
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:5000/api/v1/products/:${id}`)
+      const res = await axios.delete(`https://alive-fashion-cow.cyclic.app/api/v1/products/:${id}`)
       setData(res.data.data)
       setRefetch(true)
     } catch (err) {

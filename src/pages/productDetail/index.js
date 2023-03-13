@@ -12,7 +12,7 @@ export default function ProductDetail() {
 
   const fetchProductDetails = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/v1/products/${id}`)
+      const response = await axios.get(`https://alive-fashion-cow.cyclic.app/api/v1/products/${id}`)
       setData(response?.data?.data)
     }
     catch (err) {

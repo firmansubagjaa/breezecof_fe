@@ -20,19 +20,9 @@ export default function ProductSection() {
     }
   }
 
-  const handleDelete = async (id) => {
-    try {
-      const res = await axios.delete(`http://localhost:5000/api/v1/products/:${id}`)
-      setData(res.data.data)
-      setRefetch(true)
-    } catch (err) {
-      console.log(err)
-    }
-  }
 
   useEffect(() => {
     fetchProduct()
-    handleDelete()
   }, [])
 
   // fetch products from API

@@ -16,7 +16,7 @@ export default function RegisterForm() {
   const handleRegister = (event) => {
     event.preventDefault()
     axios({
-      url: 'http://localhost:5000/api/v1/auth/register',
+      url: 'https://alive-fashion-cow.cyclic.app/api/v1/auth/register',
       methos: 'POST',
       data: registerForm,
     }).then((res) => {
