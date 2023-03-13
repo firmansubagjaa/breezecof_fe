@@ -10,8 +10,8 @@ export default function Login() {
   return (
     <>
       <DefaultTemp title="Login">
-        <div className="grid grid-cols-2">
-          <div className="bg-auth-banner h-[150vh] bg-no-repeat"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="hidden md:grid bg-auth-banner h-[150vh] bg-no-repeat"></div>
           <div>
             <div className="navbar bg-base-100">
               <div className="navbar-start">

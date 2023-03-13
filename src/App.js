@@ -6,6 +6,9 @@ import Product from "./pages/product";
 // utils
 import { HelmetProvider } from "react-helmet-async";
 import ProductDetail from "./pages/productDetail";
+import EditProfile from "./pages/EditProfile";
+import ProtectedRoute from "./routes/ProtectedRoute";
+import AddProduct from "./pages/admin/addproduct";
 // import Belajar from "./components/"
 
 function App() {
@@ -14,10 +17,17 @@ function App() {
       <HelmetProvider>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/product" element={
+            <ProtectedRoute>
+              <Product />
+            </ProtectedRoute>
+          }
+          />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/product" element={<Product />} />
           <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/editProfile" element={<EditProfile />} />
+          <Route path="/add-product" element={<AddProduct />} />
         </Routes>
       </HelmetProvider>
 

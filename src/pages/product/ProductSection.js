@@ -1,11 +1,43 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import coupon1 from "../../assets/svg/product/coupon1.svg";
 import Footer from "../../components/footer";
 import Navbar from "../../components/navbar";
 import TabSection from './TabSection';
 
 
+
 export default function ProductSection() {
+  const [data, setData] = useState([])
+  const [refetch, setRefetch] = useState(false)
+
+  const fetchProduct = async () => {
+    try {
+      const res = await axios.get(`http://localhost:5000/api/v1/products/`)
+      setData(res.data.data)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  const handleDelete = async (id) => {
+    try {
+      const res = await axios.delete(`http://localhost:5000/api/v1/products/:${id}`)
+      setData(res.data.data)
+      setRefetch(true)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  useEffect(() => {
+    fetchProduct()
+    handleDelete()
+  }, [])
+
+  // fetch products from API
+  // res data 
+  // masukin res data lewat props ke tab section
   return (
     <div>
       <Navbar />
@@ -51,7 +83,7 @@ export default function ProductSection() {
             </div>
           </div>
         </div>
-        <TabSection />
+        <TabSection products={data} />
         <div>
         </div>
       </div>

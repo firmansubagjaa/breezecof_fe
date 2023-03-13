@@ -17,10 +17,10 @@ export default function Navbar() {
     return (
       <>
         <Link to={"/login"}>
-          <button className="btn hidden md:grid btn-link no-underline text-black px-8">Login</button>
+          <button className="btn hidden md:grid btn-link no-underline text-black px-8 font-bold">Login</button>
         </Link>
         <Link to={"/register"}>
-          <button className="btn btn-primary rounded-full px-8">Sign Up</button>
+          <button className="btn btn-primary rounded-full px-8 font-bold">Sign Up</button>
         </Link>
       </>
     )
@@ -42,13 +42,13 @@ export default function Navbar() {
             </div>
           </label>
           <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
-            <li>
+            {/* <li>
               <Link className="justify-between">
                 Profile
                 <span className="badge">New</span>
               </Link>
-            </li>
-            <li><Link>Settings</Link></li>
+            </li> */}
+            <li><Link to="/editprofile">Edit Profile</Link></li>
             <li><Link to='/login' onClick={() => localStorage.removeItem('@userLogin')} >Logout</Link></li>
           </ul>
         </div>

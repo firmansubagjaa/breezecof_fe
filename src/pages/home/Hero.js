@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../components/navbar";
 import HeroBanner from "../../assets/png/herobanner1.png";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -15,7 +16,9 @@ export default function Hero() {
             <h2 className="text-xl my-10">
               We provide high quality beans, good taste, and healthy <br /> meals made by love just for you. Start your day with us <br /> for a bigger smile!
             </h2>
-            <button className="btn btn-primary btn-wide font-bold">Get Started</button>
+            <Link to="/product">
+              <button className="btn btn-primary btn-wide font-bold">Get Started</button>
+            </Link>
           </div>
           <div>
             <form>
