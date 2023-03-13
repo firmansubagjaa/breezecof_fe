@@ -126,7 +126,7 @@ export default function TabSection(props) {
                   <Link to={`/product/${items.id}`}>
                     <div className="card card-compact w-72 md:w-[10rem] h-56 p-3 mr-0 mb-10 md:0 md:mr-4 mt-4 bg-base-100 shadow-xl">
                       <figure className="h-full">
-                        <img src={`http://localhost:5000/uploads/images/${items.images[0].filename}`} alt="Product" className="h-full w-36 object-cover rounded-full" />
+                        <img src={`https://alive-fashion-cow.cyclic.app/uploads/images/${items.images[0].filename}`} alt="Product" className="h-full w-36 object-cover rounded-full" />
                       </figure>
                       <div className="flex flex-col justify-center items-center">
                         <h2 className="card-title">{items.title}</h2>
@@ -148,7 +148,7 @@ export default function TabSection(props) {
                   <Link to={`/product/${items.id}`}>
                     <div className="card card-compact w-72 md:w-[10rem] h-56 p-3 mr-0 mb-10 md:0 md:mr-4 mt-4 bg-base-100 shadow-xl">
                       <figure className="h-full">
-                        <img src={`http://localhost:5000/uploads/images/${items.images[0].filename}`} alt="Product" className="h-full w-36 object-cover rounded-full" />
+                        <img src={`https://alive-fashion-cow.cyclic.app/uploads/images/${items.images[0].filename}`} alt="Product" className="h-full w-36 object-cover rounded-full" />
                       </figure>
                       <div className="flex flex-col justify-center items-center">
                         <h2 className="card-title">{items.title}</h2>
@@ -170,7 +170,7 @@ export default function TabSection(props) {
                   <Link to={`/product/${items.id}`}>
                     <div className="card card-compact w-72 md:w-[10rem] h-56 p-3 mr-0 mb-10 md:0 md:mr-4 mt-4 bg-base-100 shadow-xl">
                       <figure className="h-full">
-                        <img src={`http://localhost:5000/uploads/images/${items.images[0].filename}`} alt="Product" className="h-full w-36 object-cover rounded-full" />
+                        <img src={`https://alive-fashion-cow.cyclic.app/uploads/images/${items.images[0].filename}`} alt="Product" className="h-full w-36 object-cover rounded-full" />
                       </figure>
                       <div className="flex flex-col justify-center items-center">
                         <h2 className="card-title">{items.title}</h2>
@@ -192,7 +192,7 @@ export default function TabSection(props) {
                   <Link to={`/product/${items.id}`}>
                     <div className="card card-compact w-72 md:w-[10rem] h-56 p-3 mr-0 mb-10 md:0 md:mr-4 mt-4 bg-base-100 shadow-xl">
                       <figure className="h-full">
-                        <img src={`http://localhost:5000/uploads/images/${items.images[0].filename}`} alt="Product" className="h-full w-36 object-cover rounded-full" />
+                        <img src={`https://alive-fashion-cow.cyclic.app/uploads/images/${items.images[0].filename}`} alt="Product" className="h-full w-36 object-cover rounded-full" />
                       </figure>
                       <div className="flex flex-col justify-center items-center">
                         <h2 className="card-title">{items.title}</h2>
@@ -214,7 +214,7 @@ export default function TabSection(props) {
                   <Link to={`/product/${items.id}`}>
                     <div className="card card-compact w-72 md:w-[10rem] h-56 p-3 mr-0 mb-10 md:0 md:mr-4 mt-4 bg-base-100 shadow-xl">
                       <figure className="h-full">
-                        <img src={`http://localhost:5000/uploads/images/${items.images[0].filename}`} alt="Product" className="h-full w-36 object-cover rounded-full" />
+                        <img src={`https://alive-fashion-cow.cyclic.app/uploads/images/${items.images[0].filename}`} alt="Product" className="h-full w-36 object-cover rounded-full" />
                       </figure>
                       <div className="flex flex-col justify-center items-center">
                         <h2 className="card-title">{items.title}</h2>
@@ -235,7 +235,7 @@ export default function TabSection(props) {
                   <>
                     <Link to={`/product/${items.id}`}>
                       <div className="card card-compact w-[10rem] mr-4 mt-4 bg-base-100 shadow-xl">
-                        <figure><img src={`http://localhost:5000/uploads/images/${items.images[0].filename}`} alt="Shoes" /></figure>
+                        <figure><img src={`https://alive-fashion-cow.cyclic.app/uploads/images/${items.images[0].filename}`} alt="Shoes" /></figure>
                         <div className="flex flex-col justify-center items-center">
                           <h2 className="card-title">{items.title}</h2>
                           <p>{items.price}</p>

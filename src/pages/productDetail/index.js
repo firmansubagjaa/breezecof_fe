@@ -47,7 +47,7 @@ export default function ProductDetail() {
             <div className="flex flex-col md:flex-row justify-center items-center">
               <div className='mt-32 flex flex-col w-screen justify-center items-center'>
                 <figure className='my-10'>
-                  <img src={`http://localhost:5000/uploads/images/${data.images ? data.images[0].filename : ""}`} alt="products" className='rounded-full h-96 w-96 object-fill' />
+                  <img src={`https://alive-fashion-cow.cyclic.app/uploads/images/${data.images ? data.images[0].filename : ""}`} alt="products" className='rounded-full h-96 w-96 object-fill' />
                   {/* <img src={`http://localhost:5000/uploads/images/${data?.images[0]?.filename}`} alt /> */}
                   {/* <img src={require('../../assets/png/chicken.png')} alt="product" className='rounded-full h-96' /> */}
                 </figure>
