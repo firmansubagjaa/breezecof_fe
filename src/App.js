@@ -29,7 +29,11 @@ function App() {
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/editProfile" element={<EditProfile />} />
           <Route path="/add-product" element={<AddProduct />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={
+            <ProtectedRoute>
+              <Cart />
+            </ProtectedRoute>
+          } />
         </Routes>
       </HelmetProvider>
 

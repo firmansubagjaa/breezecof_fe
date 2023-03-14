@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../../components/footer'
 import Navbar from '../../components/navbar'
 import DefaultTemp from '../../templates/DefaultTemp'
-import backgroundCart from '../../assets/png/ProfileBackground.png'
+import backgroundCart from '../../assets/jpg/checkout.jpg'
 import { Link } from 'react-router-dom'
 
 export default function Cart() {
@@ -20,8 +20,8 @@ export default function Cart() {
       <div className='bg-cover flex' style={{ backgroundImage: `url(${backgroundCart})` }}>
         <div className="container">
           {/* flex */}
-          <div className='flex items-end h-40 w-52 my-10'>
-            <h1 className='font-extrabold text-white text-2xl'>Checkout your item now!</h1>
+          <div className='flex items-end h-40 w-64 my-10'>
+            <h1 className='font-extrabold text-white text-3xl'>Checkout your item now!</h1>
           </div>
 
           {/* card */}
@@ -34,14 +34,16 @@ export default function Cart() {
                   {[1, 2].map(() => {
                     return (
                       <>
-                        <div className='flex py-5'>
-                          <img src={require('../../assets/png/orderProduct.png')} alt="" className='rounded-xl' />
-                          <div className='px-5'>
-                            <h3>Hazelnut Latte</h3>
-                            <p>1x</p>
-                            <p>Regular</p>
+                        <div className='flex justify-between py-5'>
+                          <div className='flex'>
+                            <img src={require('../../assets/png/orderProduct.png')} alt="" className='rounded-xl' />
+                            <div className='px-5'>
+                              <h3>Hazelnut Latte</h3>
+                              <p>1x</p>
+                              <p>Regular</p>
+                            </div>
                           </div>
-                          <div className='flex items-center ml-10'>
+                          <div className='flex items-center'>
                             <p>IDR 24.0</p>
                           </div>
                         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 // herobanner2
-import herobanner2 from "../../assets/svg/herobanner2.svg";
+import herobanner2 from "../../assets/jpg/barista-with-customer.jpg";
 import checklist from "../../assets/svg/checklist.svg";
 import { BannerCard } from "../../components/card";
 
@@ -13,7 +13,7 @@ export default function Feature() {
       <div className="container mt-20 h-full py-14">
         <div className="flex flex-col md:flex-row justify-between">
           <figure>
-            <img src={herobanner2} alt="Team Work" />
+            <img src={herobanner2} alt="Team Work" className="w-[60vw] rounded-2xl shadow-xl shadow-gray-400" />
           </figure>
           <div className="leading-loose px-10">
             <h2 className="text-3xl my-5 font-bold">

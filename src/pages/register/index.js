@@ -4,12 +4,14 @@ import Footer from "../../components/footer";
 import logo from "../../assets/png/coffee-cup.png";
 import { Link } from "react-router-dom";
 import RegisterForm from "../../components/form/RegisterForm";
+import AuthBackground from "../../assets/jpg/Auth2.jpg"
+
 
 export default function Login() {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="hidden md:grid bg-auth-banner h-[150vh] bg-no-repeat"></div>
+        <div className="hidden md:grid h-[150vh] -z-10 bg-no-repeat bg-cover" style={{ backgroundImage: `url(${AuthBackground})` }}></div>
         <div>
           <div className="navbar bg-base-100">
             <div className="navbar-start">

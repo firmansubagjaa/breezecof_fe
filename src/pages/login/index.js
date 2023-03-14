@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import DefaultTemp from "../../templates/DefaultTemp";
 import Footer from "../../components/footer";
 import { ProductCard } from "../../components/card";
+import AuthBackground from "../../assets/jpg/Auth2.jpg"
 
 
 export default function Login() {
@@ -12,7 +13,7 @@ export default function Login() {
     <>
       <DefaultTemp title="Login">
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="hidden md:grid bg-auth-banner h-[150vh] bg-no-repeat"></div>
+          <div className="hidden md:grid h-[150vh] bg-no-repeat bg-cover" style={{ backgroundImage: `url(${AuthBackground})` }}></div>
           <div>
             <div className="navbar bg-base-100">
               <div className="navbar-start">

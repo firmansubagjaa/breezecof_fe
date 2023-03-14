@@ -49,7 +49,7 @@ export default function LoginForm() {
             <label className="label mt-5">
               <span className="label-text font-bold text-secondary">Username : </span>
             </label>
-            <input type="text" placeholder="Enter your email address" className="input input-bordered w-full"
+            <input type="text" placeholder="Enter your email address" className="input input-bordered input-secondary rounded-full w-full"
               onChange={(e) => {
                 setLoginForm({
                   ...setLoginForm,
@@ -61,7 +61,7 @@ export default function LoginForm() {
             <label className="label mt-5">
               <span className="label-text font-bold text-secondary">Password : </span>
             </label>
-            <input type="password" placeholder="Enter your password" className="input input-bordered w-full"
+            <input type="password" placeholder="Enter your password" className="input input-bordered input-secondary rounded-full w-full"
               onChange={(e) => {
                 setLoginForm({
                   ...loginForm,
@@ -76,7 +76,7 @@ export default function LoginForm() {
             </Link>
 
             {/* button */}
-            <button className="btn btn-primary btn-block my-5 shadow-2xl shadow-primary">Login</button>
+            <button className="btn btn-primary btn-block my-5 shadow-2xl shadow-primary rounded-full">Login</button>
             {/* <button className="btn btn-secondary btn-block">
               <img src={} alt="" className="mr-3" />
               Login with Google

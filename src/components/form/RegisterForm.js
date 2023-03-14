@@ -37,7 +37,7 @@ export default function RegisterForm() {
             <label className="label mt-5">
               <span className="label-text font-bold text-secondary">Username : </span>
             </label>
-            <input type="text" placeholder="Enter your email address" className="input input-bordered w-full"
+            <input type="text" placeholder="Enter your email address" className="input input-bordered w-full rounded-full input-secondary"
               onChange={(e) => {
                 setRegisterForm({
                   ...registerForm,
@@ -50,7 +50,7 @@ export default function RegisterForm() {
             <label className="label mt-5">
               <span className="label-text font-bold text-secondary">Password : </span>
             </label>
-            <input type="password" placeholder="Enter your password" className="input input-bordered w-full"
+            <input type="password" placeholder="Enter your password" className="input input-bordered w-full rounded-full input-secondary"
               onChange={(e) => {
                 setRegisterForm({
                   ...registerForm,
@@ -63,7 +63,7 @@ export default function RegisterForm() {
             <label className="label mt-5">
               <span className="label-text font-bold text-secondary">Phone Number : </span>
             </label>
-            <input type="text" placeholder="Enter your phone number" className="input input-bordered w-full"
+            <input type="text" placeholder="Enter your phone number" className="input input-bordered w-full rounded-full input-secondary"
               onChange={(e) => {
                 setRegisterForm({
                   ...registerForm,
@@ -73,14 +73,14 @@ export default function RegisterForm() {
             />
 
             {/* button */}
-            <button className='btn btn-primary btn-block my-5 shadow-xl shadow-gray-300'>Sign Up</button>
-            <button className='btn btn-ghost btn-block shadow-2xl shadow-gray-300'>
+            <button className='btn btn-primary btn-block my-5 shadow-xl shadow-gray-300 rounded-full'>Sign Up</button>
+            <button className='btn btn-ghost btn-block shadow-2xl shadow-gray-300 rounded-full'>
               <img src={googleLogo} alt="" className='mr-3' />
               Login with Google</button>
 
             <div className='border-2 border-solid border-gray-400 my-10'></div>
             <p className='mx-auto -my-14 bg-white px-5'>have account?</p>
-            <button className='btn btn-secondary btn-block mt-20 shadow-2xl shadow-secondary'>Login</button>
+            <button className='btn btn-secondary btn-block mt-20 shadow-2xl shadow-secondary rounded-full'>Login</button>
           </div>
         </div>
       </form>
