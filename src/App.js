@@ -9,6 +9,7 @@ import ProductDetail from "./pages/productDetail";
 import EditProfile from "./pages/EditProfile";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import AddProduct from "./pages/admin/addproduct";
+import Cart from "./pages/cart";
 // import Belajar from "./components/"
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/editProfile" element={<EditProfile />} />
           <Route path="/add-product" element={<AddProduct />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </HelmetProvider>
 

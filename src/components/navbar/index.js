@@ -103,7 +103,7 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li>
-                  <Link className="font-bold">Your Cart</Link>
+                  <Link to={"/cart"} className="font-bold">Your Cart</Link>
                 </li>
                 <li>
                   <Link className="font-bold">History</Link>

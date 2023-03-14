@@ -7,7 +7,21 @@ import DefaultTemp from '../../templates/DefaultTemp'
 
 export default function ProductDetail() {
   const { id } = useParams()
-  const [data, setData] = useState([])
+  const [data, setData] = useState({
+    id: "",
+    title: "",
+    price: "",
+    image: null,
+    category: "",
+    description: "",
+    images: [
+      {
+        product_id: "",
+        name: "",
+        filename: ""
+      }
+    ]
+  })
   const [size, setSize] = useState('Insert Size Cup')
   const [order, setOrder] = useState(0)
 
@@ -15,31 +29,46 @@ export default function ProductDetail() {
   const fetchProductDetails = async () => {
     try {
       const response = await axios.get(`https://alive-fashion-cow.cyclic.app/api/v1/products/${id}`)
-      setData(response?.data?.data)
+      setData(response.data.data)
     }
     catch (err) {
       console.log(err)
     }
   }
 
+
   useEffect(() => {
     fetchProductDetails()
     setSize(size)
   }, [])
 
-  console.log("apa isi id nya ?", id)
+  const cart = {
+    titleCart: data.title,
+    priceCart: data.price * order,
+    imageCart: `https://alive-fashion-cow.cyclic.app/uploads/images/${data.images ? data.images[0].filename : ""}`,
+    orderCart: order,
+    sizeCart: size,
+    product_id: data.id,
+  }
 
-  // useEffect(() => {
-  //   axios.get(`http://localhost:5000/api/v1/products/${id}`)
-  //     .then((res) => setData(res.data.data))
-  //     .catch((error) => console.log(error.response))
-  // }, [id])
+  const carts = JSON.parse(localStorage.getItem("@cart"));
 
-  // console.log("apa isi data dari api", data)
-  // console.log("apa isi image", data?.images[0])
-  console.log("isi array image", data)
+  const numberWithCommas = (num) => {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
 
-  // const img = `http://localhost:5000/uploads/images/${data.images[0].filename}`
+  const handleAddCart = (e) => {
+    alert("Yeayy! One step closer to enjoy your meal!");
+    if (carts == null) {
+      // null disini  adalah array kosong di data localStorage untuk carts
+      localStorage.setItem("@cart", JSON.stringify([cart]));
+    } else {
+      localStorage.setItem("@cart", JSON.stringify([...carts, cart]));
+      // loca
+    }
+    // debugging untuk cek carts
+    console.log(carts);
+  };
 
   return (
     <>
@@ -55,10 +84,13 @@ export default function ProductDetail() {
                   {/* <img src={require('../../assets/png/chicken.png')} alt="product" className='rounded-full h-96' /> */}
                 </figure>
                 <h1 className='font-extrabold text-4xl'>{data.title}</h1>
-                <h1 className='font-bold text-2xl'>{data.price}</h1>
+                <h3 className='font-bold text-2xl'>{numberWithCommas(data.price)}</h3>
                 <div className='hidden md:grid'>
                   <div className='my-3'>
-                    <button className='btn btn-secondary btn-wide'>Add to Cart</button>
+                    <Link to='/cart' className='btn btn-secondary btn-wide' onClick={(e) => {
+                      e.preventDefault()
+                      handleAddCart()
+                    }}>Add to Cart</Link>
                   </div>
                   <div className=''>
                     <button className='btn btn-primary btn-wide'>Ask to Staff</button>
