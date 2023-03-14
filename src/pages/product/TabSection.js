@@ -23,7 +23,7 @@ export default function TabSection(props) {
     axios.get(`https://alive-fashion-cow.cyclic.app/api/v1/products?cat=${category}`)
       .then((res) => setData(res.data.data))
       .catch((err) => console.log(err.response))
-  }, [category])
+  }, [refetch, category])
 
   useEffect(() => {
     axios.get(`https://alive-fashion-cow.cyclic.app/api/v1/products?sortBy=${sortBy}`)
@@ -77,32 +77,32 @@ export default function TabSection(props) {
         <div className="flex flex-row justify-between mb-10">
           <div className="carousel">
             <div className="carousel-item">
-              <Link className="link link-secondary font-bold no-underline" to='#' onClick={() => {
+              <Link className={`${openTab === 1 ? "border-b-2 border-solid border-secondary" : ""} link link-secondary font-bold no-underline`} to='#' onClick={() => {
                 setOpenTab(1)
                 setCategory("")
                 setSortBy(sortBy)
               }}>Favorite & promo</Link>
             </div>
             <div className="carousel-item">
-              <Link className="link link-secondary font-bold no-underline mx-10" to='#' onClick={() => {
+              <Link className={`${openTab === 2 ? "border-b-2 border-solid border-secondary" : ""} link link-secondary font-bold no-underline mx-10`} to='#' onClick={() => {
                 setOpenTab(2)
                 setCategory("Coffee")
               }}>Coffee</Link>
             </div>
             <div className="carousel-item">
-              <Link className="link link-secondary font-bold no-underline" to='#' onClick={() => {
+              <Link className={`${openTab === 3 ? "border-b-2 border-solid border-secondary" : ""} link link-secondary font-bold no-underline`} to='#' onClick={() => {
                 setOpenTab(3)
                 setCategory("Non-Coffee")
               }}>Non-Coffee</Link>
             </div>
             <div className="carousel-item">
-              <Link className="link link-secondary font-bold no-underline mx-10" to='#' onClick={() => {
+              <Link className={`${openTab === 4 ? "border-b-2 border-solid border-secondary" : ""} link link-secondary font-bold no-underline mx-10`} to='#' onClick={() => {
                 setOpenTab(4)
                 setCategory("Food")
               }}>Food</Link>
             </div>
             <div className="carousel-item">
-              <Link className="link link-secondary font-bold no-underline" to='#' onClick={() => {
+              <Link className={`${openTab === 5 ? "border-b-2 border-solid border-secondary" : ""} link link-secondary font-bold no-underline`} to='#' onClick={() => {
                 setOpenTab(5)
                 setCategory("Add-on")
               }}>Add-on</Link>
@@ -111,11 +111,11 @@ export default function TabSection(props) {
         </div>
         <div className="flex justify-between">
           <input type="text" placeholder="Search" className="input input-bordered input-secondary w-full md:w-96 rounded-full mt-5 lg:mt-0" onChange={(e) => setKeyword(e.target.value)} />
-          <select className="select select-primary w-64 max-w-xs rounded-full">
+          {/* <select className="select select-primary w-64 max-w-xs rounded-full">
             <option disabled selected>Sort By</option>
             <option onClick={() => setSortBy("ASC")}>A to Z</option>
             <option onClick={() => setSortBy("DESC")}>Z to A</option>
-          </select>
+          </select> */}
         </div>
         <div className="flex flex-wrap">
           <div className={openTab === 1 ? "flex flex-wrap justify-center items-center" : "hidden"}>

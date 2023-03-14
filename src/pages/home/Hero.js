@@ -1,11 +1,11 @@
 import React from "react";
 import Navbar from "../../components/navbar";
-import HeroBanner from "../../assets/png/herobanner1.png";
+import HeroBanner from "../../assets/png/herobanner2.jpg";
 import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <div className="w-full h-full lg:h-screen" style={{ backgroundImage: `url(${HeroBanner})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}>
+    <div className="w-full h-full bg-fixed lg:h-screen" style={{ backgroundImage: `url(${HeroBanner})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}>
       <Navbar />
       <div className="container">
         <div className="flex flex-wrap justify-between pt-[7rem]">
@@ -17,7 +17,7 @@ export default function Hero() {
               We provide high quality beans, good taste, and healthy <br /> meals made by love just for you. Start your day with us <br /> for a bigger smile!
             </h2>
             <Link to="/product">
-              <button className="btn btn-primary btn-wide font-bold">Get Started</button>
+              <button className="btn btn-primary btn-wide font-bold shadow-2xl btn-primary">Get Started</button>
             </Link>
           </div>
           <div>

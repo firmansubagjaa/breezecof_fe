@@ -79,7 +79,7 @@ export default function ProductDetail() {
             <div className="flex flex-col md:flex-row justify-center items-center">
               <div className='mt-32 flex flex-col w-screen justify-center items-center'>
                 <figure className='my-10'>
-                  <img src={`https://alive-fashion-cow.cyclic.app/uploads/images/${data.images ? data.images[0].filename : ""}`} alt="products" className='rounded-full h-96 w-96 object-fill shadow-2xl' />
+                  <img src={`https://alive-fashion-cow.cyclic.app/uploads/images/${data.images ? data.images[0].filename : ""}`} alt="products" className='rounded-full h-96 w-96 object-fill shadow-2xl shadow-gray-400' />
                   {/* <img src={`http://localhost:5000/uploads/images/${data?.images[0]?.filename}`} alt /> */}
                   {/* <img src={require('../../assets/png/chicken.png')} alt="product" className='rounded-full h-96' /> */}
                 </figure>
@@ -87,13 +87,13 @@ export default function ProductDetail() {
                 <h3 className='font-bold text-2xl'>{numberWithCommas(data.price)}</h3>
                 <div className='hidden md:grid'>
                   <div className='my-3'>
-                    <Link to='/cart' className='btn btn-secondary btn-wide' onClick={(e) => {
+                    <Link to='/cart' className='btn btn-secondary btn-wide shadow-2xl shadow-secondary' onClick={(e) => {
                       e.preventDefault()
                       handleAddCart()
                     }}>Add to Cart</Link>
                   </div>
                   <div className=''>
-                    <button className='btn btn-primary btn-wide'>Ask to Staff</button>
+                    <button className='btn btn-primary btn-wide shadow-2xl shadow-primary'>Ask to Staff</button>
                   </div>
                 </div>
               </div>
@@ -132,7 +132,7 @@ export default function ProductDetail() {
                     <button className='btn btn-secondary btn-wide'>Add to Cart</button>
                   </div>
                   <div className=''>
-                    <button className='btn btn-primary btn-wide'>Checkout</button>
+                    <button className='btn btn-primary btn-wide shadow-2xl'>Checkout</button>
                   </div>
                 </div>
               </div>
@@ -168,7 +168,7 @@ export default function ProductDetail() {
               </div>
             </div>
             <Link to='/payment' className='flex items-center ml-0 md:ml-5'>
-              <button className="btn btn-secondary h-full mt-5 md:mt-0 md:w-48 rounded-xl btn-block shadow-2xl">Checkout</button>
+              <button className="btn btn-secondary h-full mt-5 md:mt-0 md:w-48 rounded-xl btn-block shadow-2xl shadow-secondary">Checkout</button>
             </Link>
           </div>
         </div>

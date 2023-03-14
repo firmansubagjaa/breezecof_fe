@@ -1,6 +1,6 @@
 import React from 'react'
 // footer
-import logo from '../../assets/svg/logo.svg'
+import logo from '../../assets/png/coffee-cup.png'
 import facebook from "../../assets/svg/social-media/Socmed/Facebook.svg"
 import twitter from "../../assets/svg/social-media/Socmed/Twitter.svg"
 import instagram from "../../assets/svg/social-media/Socmed/Instagram.svg"
@@ -11,11 +11,11 @@ export default function Footer() {
     <>
       {/* footer */}
       <footer className="footer p-10 text-base-content bg-[#f8f8f8] -mt-20">
-        <div className="container pt-14">
+        <div className="container pt-14 mt-10">
           <div className="flex flex-col md:flex-row justify-between w-full">
             <div className='flex flex-col items-start'>
               <a className="font-bold flex normal-case items-center text-xl">
-                <img src={logo} alt="BreezeCof" className='mr-2' />
+                <img src={logo} alt="BreezeCof" className='mr-2 h-10' />
                 BreezeCof
               </a>
               <div className='font-semibold my-2'>

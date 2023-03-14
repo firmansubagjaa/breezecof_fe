@@ -13,7 +13,7 @@ export default function ProductCard() {
                   <p>Let's see the deals and pick yours!</p>
                 </div>
                 <div>
-                  <button className="btn btn-primary btn-wide">See Promo</button>
+                  <button className="btn btn-primary btn-wide shadow-2xl shadow-primary">See Promo</button>
                 </div>
               </div>
             </div>

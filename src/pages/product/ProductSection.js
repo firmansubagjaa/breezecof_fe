@@ -44,7 +44,7 @@ export default function ProductSection() {
               {[1, 3, 4].map(() => {
                 return (
                   <>
-                    <div className="bg-[#88B788] rounded-3xl flex justify-center  p-4 items-center mb-4">
+                    <div className="bg-[#88B788] rounded-3xl flex justify-center  p-4 items-center mb-4 shadow-2xl">
                       <div>
                         <img src={coupon1} alt="coupon" className="mr-14" />
                       </div>
@@ -58,7 +58,7 @@ export default function ProductSection() {
               })}
             </div>
             {/* button coupon */}
-            <button className="btn btn-secondary btn-block rounded-2xl">Apply Coupon</button>
+            <button className="btn btn-secondary btn-block rounded-2xl shadow-2xl shadow-secondary">Apply Coupon</button>
             {/* {JSON.parse(localStorage.setItem(login))} */}
 
             {/* terms section */}

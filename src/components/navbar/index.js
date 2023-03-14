@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/svg/logo.svg";
+import logo from "../../assets/png/coffee-cup.png";
 // import Auth from "../../constant/auth.json";
 
 export default function Navbar() {
@@ -20,7 +20,7 @@ export default function Navbar() {
           <button className="btn hidden md:grid btn-link no-underline text-black px-8 font-bold">Login</button>
         </Link>
         <Link to={"/register"}>
-          <button className="btn btn-primary rounded-full px-8 font-bold">Sign Up</button>
+          <button className="btn btn-primary rounded-full px-8 font-bold shadow-2xl shadow-primary">Sign Up</button>
         </Link>
       </>
     )
@@ -29,16 +29,16 @@ export default function Navbar() {
   const auth = () => {
     return (
       <>
-        <div className="indicator mr-5">
-          <span className="indicator-item badge badge-secondary">99+</span>
-          <button className="btn btn-ghost">
+        <div className="indicator mr-5 mt-2">
+          <span className="indicator-item badge badge-secondary">*</span>
+          <Link to='' className="link link-hover hover:shadow-2xl hover:shadow-gray-300">
             <img src={require('../../assets/png/chat.png')} alt="chat" />
-          </button>
+          </Link>
         </div>
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
-              <img src={require("../../assets/png/user.png")} />
+              <img src={require("../../assets/png/user.png")} alt='user' />
             </div>
           </label>
           <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
@@ -86,7 +86,7 @@ export default function Navbar() {
                 </ul>
               </div>
               <Link className="font-bold flex normal-case items-center text-xl">
-                <img src={logo} alt="BreezeCof" className="mr-2" />
+                <img src={logo} alt="BreezeCof" className="mr-2 h-10" />
                 BreezeCof
               </Link>
             </div>

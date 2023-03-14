@@ -76,7 +76,7 @@ export default function LoginForm() {
             </Link>
 
             {/* button */}
-            <button className="btn btn-primary btn-block my-5">Login</button>
+            <button className="btn btn-primary btn-block my-5 shadow-2xl shadow-primary">Login</button>
             {/* <button className="btn btn-secondary btn-block">
               <img src={} alt="" className="mr-3" />
               Login with Google

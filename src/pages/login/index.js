@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../assets/svg/logo.svg";
+import logo from "../../assets/png/coffee-cup.png";
 import { LoginForm } from "../../components/form";
 import { Link } from "react-router-dom";
 import DefaultTemp from "../../templates/DefaultTemp";
@@ -18,14 +18,14 @@ export default function Login() {
               <div className="navbar-start">
                 <Link to={"/"}>
                   <button className="btn btn-ghost normal-case text-xl font-bold">
-                    <img src={logo} alt="logo" className="mr-3" />
+                    <img src={logo} alt="logo" className="mr-3 h-10" />
                     BreezeCof
                   </button>
                 </Link>
               </div>
               <div className="navbar-end">
                 <Link to={"/register"}>
-                  <button className="btn btn-primary rounded-full px-10">Sign Up</button>
+                  <button className="btn btn-primary rounded-full px-10 shadow-2xl shadow-primary">Sign Up</button>
                 </Link>
               </div>
             </div>
