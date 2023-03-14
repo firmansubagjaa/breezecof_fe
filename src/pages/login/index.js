@@ -4,6 +4,7 @@ import { LoginForm } from "../../components/form";
 import { Link } from "react-router-dom";
 import DefaultTemp from "../../templates/DefaultTemp";
 import Footer from "../../components/footer";
+import { ProductCard } from "../../components/card";
 
 
 export default function Login() {
@@ -32,6 +33,7 @@ export default function Login() {
           </div>
         </div>
         {/* <CardOffer /> */}
+        <ProductCard />
         <Footer />
       </DefaultTemp>
     </>

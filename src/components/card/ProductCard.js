@@ -3,7 +3,7 @@ import React from "react";
 export default function ProductCard() {
   return (
     <>
-      <div className="bg-[#f8f8f8]">
+      <div className="-mt-20">
         <div className="container">
           <div className="card w-full bg-base-100 shadow-xl">
             <div className="card-body">

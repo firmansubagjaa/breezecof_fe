@@ -32,7 +32,7 @@ export default function ProductSection() {
     <div>
       <Navbar />
       <div className="flex flex-col md:flex-row">
-        <div className="flex flex-col justify-center items-center border-r border-solid border-black">
+        <div className="flex flex-col justify-center items-center border-r border-solid border-black -z-40">
           <div className="px-5 mt-32">
             <div className="text-center mb-14">
               <h2 className="text-3xl font-bold m">Promo today</h2>
