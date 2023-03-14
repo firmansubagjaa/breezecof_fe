@@ -15,7 +15,7 @@ export default function BannerCard() {
                   <p>Staff</p>
                 </div>
               </div>
-              <div className="mr-3 my-5 lg:my-0 flex border-x-2 border-solid border-gray-200 px-36">
+              <div className="mr-3 my-5 lg:my-0 flex lg:border-x-2 lg:border-solid lg:border-gray-200 px-0 lg:px-36">
                 <img src={userIcon} alt="user" className="mr-3" />
                 <div>
                   <h2 className="font-bold">90+</h2>
