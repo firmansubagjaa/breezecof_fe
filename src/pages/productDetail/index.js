@@ -1,11 +1,12 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
 import Footer from '../../components/footer'
 import Navbar from '../../components/navbar'
 import DefaultTemp from '../../templates/DefaultTemp'
 
 export default function ProductDetail() {
+  const navigate = useNavigate()
   const { id } = useParams()
   const [data, setData] = useState({
     id: "",
@@ -23,7 +24,7 @@ export default function ProductDetail() {
     ]
   })
   const [size, setSize] = useState('Insert Size Cup')
-  const [order, setOrder] = useState(0)
+  const [order, setOrder] = useState(1)
 
 
   const fetchProductDetails = async () => {
@@ -64,6 +65,7 @@ export default function ProductDetail() {
     if (carts == null) {
       // null disini  adalah array kosong di data localStorage untuk carts
       localStorage.setItem("@cart", JSON.stringify([cart]));
+      navigate('/cart')
     } else {
       localStorage.setItem("@cart", JSON.stringify([...carts, cart]));
       // loca
@@ -129,12 +131,15 @@ export default function ProductDetail() {
                     </div>
                   </div>
                 </div>
-                <div className='flex flex-col items-center md:hidden'>
-                  <div className='my-3'>
-                    <button className='btn btn-secondary btn-wide'>Add to Cart</button>
+                <div className='flex flex-col mt-10 items-center md:hidden'>
+                  <div className='my-3 w-full'>
+                    <Link to='/cart' className='btn btn-secondary btn-block shadow-2xl shadow-secondary' onClick={(e) => {
+                      e.preventDefault()
+                      handleAddCart()
+                    }}>Add to Cart</Link>
                   </div>
-                  <div className=''>
-                    <button className='btn btn-primary btn-wide shadow-2xl'>Checkout</button>
+                  <div className='w-full'>
+                    <button className='btn btn-primary btn-block shadow-2xl'>Checkout</button>
                   </div>
                 </div>
               </div>
@@ -143,7 +148,7 @@ export default function ProductDetail() {
 
           <div className='flex flex-col md:flex-row justify-center mt-20 mb-5'>
             <div className="card bg-gray-200 w-full p-5 shadow-2xl">
-              <div className="flex justify-between">
+              <div className="flex flex-col md:flex-row items-center justify-between">
                 <div className='flex items-center'>
                   <div>
                     <img src={`https://alive-fashion-cow.cyclic.app/uploads/images/${data.images ? data.images[0].filename : ""}`} alt="products" className='rounded-full h-20 w-20 object-fill' />
@@ -154,7 +159,7 @@ export default function ProductDetail() {
                   </div>
                 </div>
 
-                <div className='flex items-center'>
+                <div className='flex mt-5 md:mt-0 items-center'>
                   <button className='btn btn-secondary' onClick={(e) => {
                     e.preventDefault()
                     setOrder(order - 1)

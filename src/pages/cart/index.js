@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from '../../components/footer'
 import Navbar from '../../components/navbar'
 import DefaultTemp from '../../templates/DefaultTemp'
@@ -6,7 +6,13 @@ import backgroundCart from '../../assets/jpg/checkout.jpg'
 import { Link } from 'react-router-dom'
 
 export default function Cart() {
+  const [refetch, setRefetch] = useState(false)
   const orderResult = JSON.parse(localStorage.getItem("@cart")) || [];
+
+  useEffect(() => {
+    setRefetch(true)
+  }, [refetch])
+
 
   console.log(orderResult)
   // const userID = JSON.paser(localStorage.getItem('@userlogin')).user.id
@@ -52,7 +58,11 @@ export default function Cart() {
                                       <p>{items.priceCart.toFixed(3)}</p>
                                       <p></p>
                                       {/* <p>{items.priceCart}</p> */}
-                                      <button className="btn btn-primary rounded-full px-5" onClick={() => localStorage.removeItem("@cart").id}>X</button>
+                                      <button className="btn btn-primary rounded-full px-5" onClick={() => {
+                                        setRefetch(!refetch)
+                                        return localStorage.removeItem("@cart").id
+                                      }
+                                      }>X</button>
                                     </div>
                                   </div>
                                 </>
