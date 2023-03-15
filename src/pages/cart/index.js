@@ -29,24 +29,37 @@ export default function Cart() {
             <div className="card w-full lg:w-[40vw] bg-white p-5 shadow-2xl shadow-gray-500">
               <div className='border-b-2 border-solid border-gray-200'>
                 <h1 className='flex justify-center items-center font-bold text-xl py-14'>Order Summary</h1>
-                <h1 className='font-bold'>{JSON.parse(localStorage.getItem("@cart")).titleCart}</h1>
+                {/* <h1 className='font-bold'>{JSON.parse(localStorage.getItem("@cart")).titleCart}</h1> */}
                 <div clasName="flex items-center">
-                  {[1, 2].map(() => {
+                  {[1].map(() => {
                     return (
                       <>
-                        <div className='flex justify-between py-5'>
-                          <div className='flex'>
-                            <img src={require('../../assets/png/orderProduct.png')} alt="" className='rounded-xl' />
-                            <div className='px-5'>
-                              <h3>Hazelnut Latte</h3>
-                              <p>1x</p>
-                              <p>Regular</p>
-                            </div>
+                        {localStorage.getItem('@cart') ? (
+                          <div>
+                            {JSON.parse(localStorage.getItem('@cart')).map((items) => {
+                              return (
+                                <>
+                                  <div className='flex flex-row justify-between py-5'>
+                                    <div className='flex'>
+                                      <img src={items.imageCart} alt="" className='h-full w-36 object-cover rounded-xl' />
+                                      <div className='px-5'>
+                                        <h3>{items.titleCart}</h3>
+                                        <p>{items.orderCart}</p>
+                                        <p>{items.sizeCart}</p>
+                                      </div>
+                                    </div>
+                                    <div className='flex flex-col justify-center items-center'>
+                                      <p>{items.priceCart.toFixed(3)}</p>
+                                      <p></p>
+                                      {/* <p>{items.priceCart}</p> */}
+                                      <button className="btn btn-primary rounded-full px-5" onClick={() => localStorage.removeItem("@cart").id}>X</button>
+                                    </div>
+                                  </div>
+                                </>
+                              )
+                            })}
                           </div>
-                          <div className='flex items-center'>
-                            <p>IDR 24.0</p>
-                          </div>
-                        </div>
+                        ) : "not found"}
                       </>
                     )
                   })}

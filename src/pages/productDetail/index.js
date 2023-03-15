@@ -42,7 +42,8 @@ export default function ProductDetail() {
     setSize(size)
   }, [])
 
-  const cart = {
+  const cart =
+  {
     titleCart: data.title,
     priceCart: data.price * order,
     imageCart: `https://alive-fashion-cow.cyclic.app/uploads/images/${data.images ? data.images[0].filename : ""}`,
@@ -50,6 +51,7 @@ export default function ProductDetail() {
     sizeCart: size,
     product_id: data.id,
   }
+
 
   const carts = JSON.parse(localStorage.getItem("@cart"));
 
