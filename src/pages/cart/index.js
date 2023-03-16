@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Footer from '../../components/footer'
 import Navbar from '../../components/navbar'
 import DefaultTemp from '../../templates/DefaultTemp'
-import backgroundCart from '../../assets/jpg/checkout.jpg'
+import backgroundCart from '../../assets/webp/checkout.webp'
 import { Link } from 'react-router-dom'
 
 export default function Cart() {

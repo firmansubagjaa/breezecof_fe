@@ -4,7 +4,7 @@ import Footer from "../../components/footer";
 import logo from "../../assets/png/coffee-cup.png";
 import { Link } from "react-router-dom";
 import RegisterForm from "../../components/form/RegisterForm";
-import AuthBackground from "../../assets/jpg/Auth2.jpg"
+import AuthBackground from "../../assets/webp/Auth2.webp"
 
 
 export default function Login() {

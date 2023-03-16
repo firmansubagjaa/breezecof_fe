@@ -6,7 +6,7 @@ import package1 from "../../assets/png/hazelnut.png";
 export default function Herobanner3() {
   return (
     <>
-      <div className="bg-[#fbfbfb]">
+      <section className="bg-[#fbfbfb]">
         <div className="container py-16">
           <div className="text-center">
             <h2 className="text-3xl mt-10 font-bold">Here is People’s Favorite</h2>
@@ -62,7 +62,7 @@ export default function Herobanner3() {
             })}
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

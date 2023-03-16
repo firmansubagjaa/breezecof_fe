@@ -5,7 +5,7 @@ import map from "../../assets/svg/map.svg";
 export default function Herobanner4() {
   return (
     <>
-      <div className="bg-[#fbfbfb]">
+      <section className="bg-[#fbfbfb]">
         <div className="container py-36">
           <div className="flex flex-col justify-center items-center text-center">
             <div className="py-24">
@@ -22,7 +22,7 @@ export default function Herobanner4() {
             {/* <div className="bg-map-banner h-full my-32 w-full bg-no-repeat bg-cover"></div> */}
           </div>
         </div>
-      </div>
+      </section>
       {/* end */}
     </>
   );

@@ -6,7 +6,7 @@ import { BannerCard } from "../../components/card";
 
 export default function Feature() {
   return (
-    <div>
+    <section>
       <div className="-mt-14">
         <BannerCard />
       </div>
@@ -15,7 +15,7 @@ export default function Feature() {
           <figure>
             <img src={herobanner2} alt="Team Work" className="w-full lg:w-[60vw] rounded-2xl shadow-xl shadow-gray-400" />
           </figure>
-          <div className="leading-loose px-10">
+          <article className="leading-loose px-10">
             <h2 className="text-3xl my-5 font-bold">
               We Provide Good Coffee <br /> and Healthy Meals
             </h2>
@@ -38,9 +38,9 @@ export default function Feature() {
                 <p>Free member card with a minimum purchase of IDR 200.000.</p>
               </li>
             </ul>
-          </div>
+          </article>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

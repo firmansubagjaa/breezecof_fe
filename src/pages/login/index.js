@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import DefaultTemp from "../../templates/DefaultTemp";
 import Footer from "../../components/footer";
 import { ProductCard } from "../../components/card";
-import AuthBackground from "../../assets/jpg/Auth2.jpg"
+import AuthBackground from "../../assets/webp/Auth2.webp"
 
 
 export default function Login() {

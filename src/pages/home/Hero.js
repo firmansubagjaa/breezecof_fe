@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/navbar";
-import HeroBanner from "../../assets/png/herobanner2.jpg";
+import HeroBanner from "../../assets/webp/herobanner2.webp";
 import { Link } from "react-router-dom";
 
 export default function Hero() {
 
   return (
-    <div className="w-full bg-fixed h-screen lg:h-screen" style={{ backgroundImage: `url(${HeroBanner})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}>
+    <section className="w-full bg-fixed h-screen lg:h-screen" style={{ backgroundImage: `url(${HeroBanner})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}>
       <Navbar />
       <div className="container">
         <div className="flex flex-wrap justify-between pt-[7rem]">
@@ -37,6 +37,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -7,7 +7,7 @@ export default function Herobanner6() {
   return (
     <>
       {/* herrobaner6 */}
-      <div className="bg-[#fbfbfb]">
+      <section className="bg-[#fbfbfb]">
         <div className="container">
           <div className="text-center leading-loose">
             <h2 className="text-3xl font-bold leading-normal">
@@ -46,7 +46,7 @@ export default function Herobanner6() {
             <div className=""></div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

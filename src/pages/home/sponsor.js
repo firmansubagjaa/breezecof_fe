@@ -7,7 +7,7 @@ import Spotify from '../../assets/svg/brand-partner/spotify.svg'
 
 export default function Sponsor() {
   return (
-    <div className="bg-[#fbfbfb]">
+    <section className="bg-[#fbfbfb]">
       <div className='container'>
         <div className="text-center">
           <h2 className='text-3xl pt-10 font-bold'>Our Partner</h2>
@@ -30,6 +30,6 @@ export default function Sponsor() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

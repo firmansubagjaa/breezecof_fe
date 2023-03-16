@@ -60,7 +60,7 @@ export default function Navbar() {
   return (
     <>
       {/* navbar */}
-      <div div className="bg-base-100 fixed w-full z-[99]">
+      <nav div className="bg-base-100 fixed w-full z-[99]">
         <div className="navbar py-5 shadow-md">
           <div className="container">
             <div className="navbar-start flex">
@@ -122,7 +122,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-      </div>
+      </nav>
     </>
   );
 }
