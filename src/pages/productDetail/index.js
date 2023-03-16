@@ -60,12 +60,13 @@ export default function ProductDetail() {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
+
+
   const handleAddCart = (e) => {
-    alert("Yeayy! One step closer to enjoy your meal!");
+    alert('Pesanan udah dimasukkan ke keranjang :D')
     if (carts == null) {
       // null disini  adalah array kosong di data localStorage untuk carts
       localStorage.setItem("@cart", JSON.stringify([cart]));
-      navigate('/cart')
     } else {
       localStorage.setItem("@cart", JSON.stringify([...carts, cart]));
       // loca
@@ -73,6 +74,15 @@ export default function ProductDetail() {
     // debugging untuk cek carts
     console.log(carts);
   };
+
+  const delay = (ms) => {
+    return new Promise(resolve => setTimeout(resolve, ms))
+  }
+
+  const handleAddCartTime = async () => {
+    await handleAddCart()
+    await delay(100)
+  }
 
   return (
     <>
@@ -93,7 +103,7 @@ export default function ProductDetail() {
                   <div className='my-3'>
                     <Link to='/cart' className='btn btn-secondary btn-wide shadow-2xl shadow-secondary' onClick={(e) => {
                       e.preventDefault()
-                      handleAddCart()
+                      handleAddCartTime()
                     }}>Add to Cart</Link>
                   </div>
                   <div className=''>
@@ -139,7 +149,7 @@ export default function ProductDetail() {
                     }}>Add to Cart</Link>
                   </div>
                   <div className='w-full'>
-                    <button className='btn btn-primary btn-block shadow-2xl'>Checkout</button>
+                    <Link to='/cart' className='btn btn-primary btn-block shadow-2xl'>Checkout</Link>
                   </div>
                 </div>
               </div>
@@ -174,7 +184,7 @@ export default function ProductDetail() {
                 </div>
               </div>
             </div>
-            <Link to='/payment' className='flex items-center ml-0 md:ml-5'>
+            <Link to='/cart' className='flex items-center ml-0 md:ml-5'>
               <button className="btn btn-secondary h-full mt-5 md:mt-0 md:w-48 rounded-xl btn-block shadow-2xl shadow-secondary">Checkout</button>
             </Link>
           </div>

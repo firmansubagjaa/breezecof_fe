@@ -23,6 +23,7 @@ export default function TabSection(props) {
     axios.get(`https://alive-fashion-cow.cyclic.app/api/v1/products?cat=${category}`)
       .then((res) => setData(res.data.data))
       .catch((err) => console.log(err.response))
+    setRefetch(true)
   }, [refetch, category])
 
   useEffect(() => {
@@ -43,7 +44,7 @@ export default function TabSection(props) {
 
   useEffect(() => {
     handleDelete()
-  })
+  }, [refetch])
 
   const EditAndAddButton = () => {
     return (
@@ -62,7 +63,10 @@ export default function TabSection(props) {
     return (
       <>
         <button className="btn btn-primary btn-block rounded-full">Edit Product</button>
-        <button className="btn btn-secondary btn-block rounded-full" onClick={(id) => handleDelete(id)}>Delete</button>
+        <Link to={`/product/${data.id}`} className="btn btn-secondary btn-block rounded-full" onClick={(id) => {
+          handleDelete(id)
+          setRefetch(!refetch)
+        }}>Delete</Link>
       </>
     )
   }
@@ -80,31 +84,39 @@ export default function TabSection(props) {
               <Link className={`${openTab === 1 ? "border-b-2 border-solid border-secondary" : ""} link link-secondary font-bold no-underline`} to='#' onClick={() => {
                 setOpenTab(1)
                 setCategory("")
-                setSortBy(sortBy)
+                setRefetch(!refetch)
               }}>Favorite & promo</Link>
             </div>
             <div className="carousel-item">
               <Link className={`${openTab === 2 ? "border-b-2 border-solid border-secondary" : ""} link link-secondary font-bold no-underline mx-10`} to='#' onClick={() => {
                 setOpenTab(2)
                 setCategory("Coffee")
+                setRefetch(!refetch)
+
               }}>Coffee</Link>
             </div>
             <div className="carousel-item">
               <Link className={`${openTab === 3 ? "border-b-2 border-solid border-secondary" : ""} link link-secondary font-bold no-underline`} to='#' onClick={() => {
                 setOpenTab(3)
                 setCategory("Non-Coffee")
+                setRefetch(!refetch)
+
               }}>Non-Coffee</Link>
             </div>
             <div className="carousel-item">
               <Link className={`${openTab === 4 ? "border-b-2 border-solid border-secondary" : ""} link link-secondary font-bold no-underline mx-10`} to='#' onClick={() => {
                 setOpenTab(4)
                 setCategory("Food")
+                setRefetch(!refetch)
+
               }}>Food</Link>
             </div>
             <div className="carousel-item">
               <Link className={`${openTab === 5 ? "border-b-2 border-solid border-secondary" : ""} link link-secondary font-bold no-underline`} to='#' onClick={() => {
                 setOpenTab(5)
                 setCategory("Add-on")
+                setRefetch(!refetch)
+
               }}>Add-on</Link>
             </div>
           </div>
