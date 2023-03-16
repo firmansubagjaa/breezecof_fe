@@ -10,6 +10,7 @@ import EditProfile from "./pages/EditProfile";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import AddProduct from "./pages/admin/addproduct";
 import Cart from "./pages/cart";
+import History from "./pages/history";
 // import Belajar from "./components/"
 
 function App() {
@@ -32,6 +33,11 @@ function App() {
           <Route path="/cart" element={
             <ProtectedRoute>
               <Cart />
+            </ProtectedRoute>
+          } />
+          <Route path="/history" element={
+            <ProtectedRoute>
+              <History />
             </ProtectedRoute>
           } />
         </Routes>

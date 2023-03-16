@@ -1,5 +1,7 @@
 import React from "react";
 import userIcon from '../../assets/svg/Icon/user.svg'
+import locationIcon from '../../assets/svg/Icon/location.svg'
+import costumerIcon from '../../assets/svg/Icon/love.svg'
 
 export default function BannerCard() {
   return (
@@ -16,17 +18,17 @@ export default function BannerCard() {
                 </div>
               </div>
               <div className="mr-3 my-5 lg:my-0 flex lg:border-x-2 lg:border-solid lg:border-gray-200 px-0 lg:px-36">
-                <img src={userIcon} alt="user" className="mr-3" />
+                <img src={locationIcon} alt="user" className="mr-3" />
                 <div>
-                  <h2 className="font-bold">90+</h2>
-                  <p>Staff</p>
+                  <h2 className="font-bold">30+</h2>
+                  <p>Store</p>
                 </div>
               </div>
               <div className="mr-3 flex">
-                <img src={userIcon} alt="user" className="mr-3" />
+                <img src={costumerIcon} alt="user" className="mr-3 p-4 bg-primary rounded-full" />
                 <div>
-                  <h2 className="font-bold">90+</h2>
-                  <p>Staff</p>
+                  <h2 className="font-bold">800+</h2>
+                  <p>Customer</p>
                 </div>
               </div>
 

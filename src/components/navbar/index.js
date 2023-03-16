@@ -81,7 +81,7 @@ export default function Navbar() {
                     <Link to="/cart">Your Cart</Link>
                   </li>
                   <li>
-                    <Link to="/">History</Link>
+                    <Link to="/history">History</Link>
                   </li>
                 </ul>
               </div>
@@ -106,7 +106,7 @@ export default function Navbar() {
                   <Link to={"/cart"} className="font-bold">Your Cart</Link>
                 </li>
                 <li>
-                  <Link className="font-bold">History</Link>
+                  <Link to={"/history"} className="font-bold">History</Link>
                 </li>
               </ul>
             </div>
