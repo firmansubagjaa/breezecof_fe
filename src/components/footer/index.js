@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <>
       {/* footer */}
-      <footer className="footer p-10 text-base-content bg-[#f8f8f8] -mt-20">
+      <footer className="footer p-10 text-base-content bg-[#f8f8f8] -mt-28">
         <div className="container pt-14 mt-10">
           <div className="flex flex-col md:flex-row justify-between w-full">
             <div className='flex flex-col items-start'>

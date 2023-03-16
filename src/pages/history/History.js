@@ -7,7 +7,7 @@ import backgroundHistory from '../../assets/webp/historyBackground.webp'
 export default function HistorySection() {
   return (
     <DefaultTemp title="History">
-      <div className='bg-cover flex mb-20 h-screen' style={{ backgroundImage: `url(${backgroundHistory})` }}>
+      <div className='bg-cover flex mb-28 pb-20 h-full' style={{ backgroundImage: `url(${backgroundHistory})` }}>
         <div className="container">
           {/* flex */}
           <div className='flex flex-col items-center justify-end text-center h-40 w-full my-10'>
@@ -16,8 +16,8 @@ export default function HistorySection() {
           </div>
 
           {/* card */}
-          <div className="flex flex-wrap">
-            .{[1, 2, 3, 4, 5, 6].map(() => {
+          <div className="flex flex-wrap justify-center items-center">
+            .{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map(() => {
               return (
                 <>
                   <div className="card mr-2 mt-2 w-64 bg-slate-300 p-3">

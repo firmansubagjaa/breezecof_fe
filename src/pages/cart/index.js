@@ -23,7 +23,7 @@ export default function Cart() {
   return (
     <DefaultTemp title="Your Cart">
       <Navbar />
-      <div className='bg-cover flex' style={{ backgroundImage: `url(${backgroundCart})` }}>
+      <div className='bg-cover mb-28 flex' style={{ backgroundImage: `url(${backgroundCart})` }}>
         <div className="container">
           {/* flex */}
           <div className='flex items-end h-40 w-64 my-10'>
@@ -31,7 +31,7 @@ export default function Cart() {
           </div>
 
           {/* card */}
-          <div className="flex flex-col lg:flex-row justify-between">
+          <div className="flex flex-col pb-32 lg:flex-row justify-between">
             <div className="card w-full lg:w-[40vw] bg-white p-5 shadow-2xl shadow-gray-500">
               <div className='border-b-2 border-solid border-gray-200'>
                 <h1 className='flex justify-center items-center font-bold text-xl py-14'>Order Summary</h1>
@@ -103,13 +103,13 @@ export default function Cart() {
               </div>
             </div>
             <div className='flex flex-col items-start h-40 mb-96'>
-              <div className='flex justify-between w-full font-extrabold text-white'>
+              <div className='flex justify-between w-full font-extrabold text-white mt-10'>
                 <h1 className=' text-2xl'>Address Detail</h1>
                 <Link to="/edit-profile" className='text-xl'>
                   <p>Edit</p>
                 </Link>
               </div>
-              <div className="card bg-white p-5 w-96">
+              <div className="card bg-white p-5 w-full">
                 <p className='border-b-2 border-solid border-gray-400'><span className='font-bold'>Delivery</span> to Iskandar</p>
                 <p className='border-b-2 border-solid border-gray-400'>Km 5 refinery road oppsite re
                   public road, effurun, Jakarta</p>
@@ -120,7 +120,7 @@ export default function Cart() {
                 <div className='flex font-extrabold text-white'>
                   <h1 className=' text-2xl'>Payment Method</h1>
                 </div>
-                <div className="card bg-white p-5 w-96">
+                <div className="card bg-white p-5 w-full">
                   <p className='border-b-2 border-solid border-gray-400'><span className='font-bold'>Delivery</span> to Iskandar</p>
                   <p className='border-b-2 border-solid border-gray-400'>Km 5 refinery road oppsite re
                     public road, effurun, Jakarta</p>
