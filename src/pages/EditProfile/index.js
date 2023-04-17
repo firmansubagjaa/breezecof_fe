@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../../components/navbar'
 import ProfileBackground from '../../assets/png/ProfileBackground.png'
 import Footer from '../../components/footer'
 import DefaultTemp from '../../templates/DefaultTemp'
 
 export default function EditProfile() {
+  const [image, setImage] = useState(require('../../assets/png/blank-photo.png'));
+
+  const handleChange = (e) => {
+    if (e.target.files[0]) {
+      setImage(URL.createObjectURL(e.target.files[0]))
+    }
+  }
+
+  const handleDelete = () => {
+    setImage(require('../../assets/png/blank-photo.png'))
+  }
+
   return (
     <>
       <DefaultTemp title="Edit Profile">
@@ -23,15 +35,18 @@ export default function EditProfile() {
               <div className="flex flex-col md:flex-row">
                 <div className="flex flex-col justify-center items-center border p-16">
                   <figure>
-                    <img src={require('../../assets/png/user.png')} alt="user" className='rounded-full' />
+                    {/* <img src={require('../../assets/png/user.png')} alt="user" className='rounded-full' /> */}
+                    <img src={image} alt="user" className='rounded-full w-56' />
                   </figure>
                   <div className='text-center'>
                     <h1 className='font-bold text-xl'>Firman Subagja</h1>
                     <h3 className='font-semibold text-sm'>subagja.firman33@gmailcom</h3>
                   </div>
                   <div className='my-10 flex flex-col'>
-                    <button className='btn btn-primary'>Choose Photo</button>
-                    <button className='btn btn-secondary my-5'>Remove Photo</button>
+                    {/* <input type="file" className='btn btn-primary' onChange={handleChange} /> */}
+                    <input type="file" className="file-input file-input-bordered file-input-warning w-full max-w-xs" onChange={handleChange} />
+                    {/* <input type="file" className='btn btn-primary'>Choose Photo</input> */}
+                    <button className='btn btn-secondary my-5' onClick={handleDelete}>Remove Photo</button>
                     <button className='btn btn-accent shadow-xl my-5'>Remove Photo</button>
                   </div>
                   <div className='text-center'>
